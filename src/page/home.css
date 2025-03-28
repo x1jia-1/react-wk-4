@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: neonBackground 8s infinite;
+  color: #00ffcc;
+}
+
+@keyframes neonBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+div {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+  margin: 20px;
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+h1:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 50px #ff007f;
+}
+
+a {
+  text-decoration: none;
+  margin: 10px;
+  color: #00ffcc;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px #ff007f, 0 0 40px #ff007f;
+}
+
+.link-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
+  background: #ff007f;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #000, 0 0 10px #000;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: #00ffcc;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
