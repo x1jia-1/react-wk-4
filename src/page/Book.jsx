@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router';
 import Books from '../../books.json';
 import './book.css';
+import { useDispatch } from 'react-redux';
+import { addCartItem } from '../redux/cartslice';
 
 const Book = () => {
   const { id } = useParams();
@@ -9,13 +11,21 @@ const Book = () => {
   const book = Books.find((b) => b.ID === parseInt(id));
 
   const [qty, setQty] = useState(1); // Local state：購買數量
+  const dispatch = useDispatch();
 
   const handleBackClick = () => {
     navigate('/');
   };
 
   const handleAddToCart = () => {
-    alert(`add to cart！數量：${qty}`);
+    dispatch(addCartItem({
+      id: book.ID,
+      title: book.title,
+      price: book.price,
+      cover: book.cover,
+      qty,
+    }));
+    alert(`已加入購物車：${book.title} x ${qty}`);
   };
 
   if (!book) {

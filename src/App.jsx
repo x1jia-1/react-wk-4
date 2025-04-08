@@ -2,12 +2,15 @@
 import { Routes, Route } from "react-router";
 import Home from "./page/Home";
 import Book from "./page/Book";
+import CartSummary from './components/CartSummary';
 
 function App() {
   return (
     <Routes>
+      
       <Route path="/" element={<Home />} />
       <Route path="/book/:id" element={<Book />} />
+      <Route path="/cart" element={<CartSummary />} />
     </Routes>
   );
 }
