@@ -6,12 +6,15 @@ import CartSummary from './components/CartSummary';
 
 function App() {
   return (
+    <>
+    <CartSummary />  
     <Routes>
       
       <Route path="/" element={<Home />} />
       <Route path="/book/:id" element={<Book />} />
-      <Route path="/cart" element={<CartSummary />} />
+      
     </Routes>
+    </>
   );
 }
 

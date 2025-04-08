@@ -11,9 +11,9 @@ const BasketModal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <h2>購物車內容</h2>
+        <h2>Whats in the cart</h2>
         {cartItems.length === 0 ? (
-          <p>購物車是空的</p>
+          <p>its empty</p>
         ) : (
           <ul>
             {cartItems.map((item) => (
@@ -21,15 +21,15 @@ const BasketModal = ({ isOpen, onClose }) => {
                 <img src={item.cover} alt={item.title} className="thumb" />
                 <div>
                   <strong>{item.title}</strong><br />
-                  數量：{item.qty}｜單價：${item.price}
+                  Qty：{item.qty}｜Price：${item.price}
                 </div>
               </li>
             ))}
           </ul>
         )}
         <hr />
-        <p><strong>總價：</strong>${totalPrice}</p>
-        <button onClick={onClose}>關閉</button>
+        <p><strong>Total：</strong>${totalPrice}</p>
+        <button onClick={onClose}>CLOSE</button>
       </div>
     </div>
   );
